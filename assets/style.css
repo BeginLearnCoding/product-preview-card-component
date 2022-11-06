@@ -1,0 +1,145 @@
+/*- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&display=swap');
+
+/*- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)*/
+
+:root {
+--dark-cyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+--very-dark-blue: hsl(212, 21%, 14%);
+--dark-grayish-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+}
+
+*{
+    font-family: Montserrat, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    padding: 5em;
+    background-color: var(--cream);
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 1.5em;
+    width: 100%;
+    height: auto;
+}
+/*mobile first*/
+.mobile-banner {
+    max-width: 100%;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+.desktop-banner {
+    display: none;
+}
+section {
+    color: var(--dark-grayish-blue);
+    padding: 3em;
+} 
+
+h4 {
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: .3em;
+    
+}
+
+h1 {
+    font-family: Fraunces, sans-serif;
+    font-size: 250%;
+    font-weight: 700;
+    padding: .5em 0;
+    color: var(--very-dark-blue);
+    
+}
+.product-desc p {
+    line-height: 150%;
+}
+.price {
+    display: flex;
+}
+.price h5 {
+    padding: 2em 1em;
+    text-align: center;
+    text-decoration: line-through;
+}
+.price h1 {
+    color: var(--dark-cyan);
+}
+
+button {
+    width: 100%;
+    margin-bottom: .7em;
+    padding: 2em;
+    font-size: 100%;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--dark-cyan);
+    border-radius: .5em;
+    border: none;
+}
+
+.attribution {
+    margin-top: 5em;
+    text-align: center;
+}
+
+/*desktop*/
+@media (min-width: 1440px) {
+    
+    .desktop-banner {
+        width: 50%;
+        display: block;
+        height: 100%;
+        border-top-left-radius: 1.5em;
+        border-bottom-left-radius: 1.5em;
+    }
+    .mobile-banner {
+        display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: auto;
+        height: auto;        
+    }
+    section h1 {
+        font-size: 300%;
+    }
+    .product-desc p {
+        font-size: 150%;
+    }   
+    .price h5 {
+        padding: 2.5em 1em;
+        text-align: center;
+        text-decoration: line-through;
+    }
+    button {
+        margin-bottom: 0;
+    }
+
+}
+    
